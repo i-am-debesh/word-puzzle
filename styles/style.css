@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+h1{
+    text-align: center;
+    color: white;
+}
+.main-container {
+    /* background-color: rgb(130, 130, 149); */
+    height: 29rem;
+    width: 100%;
+}
+.game {
+    text-align: center;
+    margin: 1rem;
+    padding-top: 1rem;
+}
+.game-type {
+    font-size: 2rem;
+    font-weight: bolder;
+    border: none;
+    margin: 1rem;
+    background-color: white;    
+    padding: 1rem;
+    align-self: center;
+    border: none;
+    box-shadow: 1px 1px 8px rgb(246, 246, 246);
+    background-color: rgba(179, 127, 209, 0.712);
+    
+}
+.question-field {
+    margin: 2rem;
+}
+.question {
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+    font-size: 2rem;
+    color: rgb(162, 255, 0);
+
+}
+.submit-btn {
+    padding: 0.5rem;
+    background-color: yellow;
+    border: none;
+    margin-left: 1rem;
+    border: none;
+    box-shadow: 1px 1px 8px rgb(197, 221, 197);
+    font-weight: bold;
+}
+.answer-field {
+    margin: 2rem;
+    font-weight: bold;
+}
+.input-box{
+    padding: 0.5rem;
+    border: none;
+    box-shadow: 1px 1px 8px rgb(197, 221, 197);
+    /* background-color: rgba(0, 128, 0, 0.712); */
+    background-color: rgba(0, 255, 255, 0);
+    color: white;
+}
+.result-field{
+    font-weight: bold;
+    color: white;
+}
+.status{
+    color: greenyellow;
+    margin-bottom: 1rem;
+}
+.correct {
+    color: greenyellow;
+}
+.incorrect {
+    color: rgb(255, 27, 27);
+}
+.reset-btn {
+    padding: 0.5rem;
+    margin-top: 2rem;
+    border: none;
+    box-shadow: 1px 1px 8px rgb(197, 221, 197);
+    background-color: rgba(0, 128, 0, 0.712);
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
