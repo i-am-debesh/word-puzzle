@@ -1,4 +1,43 @@
 const wordRiddles = [
+    { word: "compass", riddle: "I help you find direction, but I don’t have legs. What am I?" },
+    { word: "telescope", riddle: "I bring distant stars closer, but I’m not a spaceship. What am I?" },
+    { word: "bicycle", riddle: "I have two wheels and pedals, but I don’t go on my own. What am I?" },
+    { word: "rocket", riddle: "I launch into space, but I don’t need wings. What am I?" },
+    { word: "scissors", riddle: "I have two blades and I cut things, but I don’t have a mouth. What am I?" },
+    { word: "umbrella", riddle: "I open up when it rains, but I don’t have a brain. What am I?" },
+    { word: "calculator", riddle: "I help you count numbers, but I’m not a person. What am I?" },
+    { word: "sailboat", riddle: "I glide on water, and the wind is my engine. What am I?" },
+    { word: "snowflake", riddle: "I am unique, falling from the sky in winter. What am I?" },
+    { word: "magnifying glass", riddle: "I help you see things bigger than they are. What am I?" },
+    { word: "bridge", riddle: "I connect two places, but I’m not a road. What am I?" },
+    { word: "fountain", riddle: "I have water, but I’m not a lake or river. What am I?" },
+    { word: "anchor", riddle: "I keep ships in place, but I don’t sail. What am I?" },
+    { word: "whistle", riddle: "I make a sound when you blow, but I’m not a horn. What am I?" },
+    { word: "parachute", riddle: "I help you fall slowly, but I’m not a bird. What am I?" },
+    { word: "firetruck", riddle: "I carry water to put out flames, but I’m not a firefighter. What am I?" },
+    { word: "microscope", riddle: "I help you see tiny things, but I don’t make them bigger. What am I?" },
+    { word: "trolley", riddle: "I run on tracks, carrying people around. What am I?" },
+    { word: "skateboard", riddle: "I roll on four wheels, and I’m not a car. What am I?" },
+    { word: "fishing rod", riddle: "I help you catch fish, but I’m not a net. What am I?" },
+    { word: "helicopter", riddle: "I fly without wings and have a spinning blade. What am I?" },
+    { word: "glasses", riddle: "I help you see clearer, but I don’t have eyes. What am I?" },
+    { word: "keyboard", riddle: "I have keys but no locks, and I help you type. What am I?" },
+    { word: "jigsaw", riddle: "I’m a puzzle, piece by piece, I come together. What am I?" },
+    { word: "scooter", riddle: "I have two wheels and you push me with your feet. What am I?" },
+    { word: "wrench", riddle: "I help tighten or loosen things, but I don’t turn by myself. What am I?" },
+    { word: "flashlight", riddle: "I light the way in the dark, but I’m not the sun. What am I?" },
+    { word: "binoculars", riddle: "I help you see far away things, but I’m not a telescope. What am I?" },
+    { word: "sunflower", riddle: "I turn to the sun, but I’m not alive. What am I?" },
+    { word: "drone", riddle: "I fly without a pilot, but I’m not a bird. What am I?" },
+    { word: "thermometer", riddle: "I measure temperature, but I don’t feel heat. What am I?" },
+    { word: "waterfall", riddle: "I’m made of water, and I fall from great heights. What am I?" },
+    { word: "sled", riddle: "I glide on snow, but I don’t have wheels. What am I?" },
+    { word: "telescope", riddle: "I help you see stars far away, but I’m not a spaceship. What am I?" },
+    { word: "furnace", riddle: "I heat up your home, but I’m not a fire. What am I?" },
+    { word: "magnets", riddle: "I attract things without touching them. What am I?" },
+    { word: "scaffolding", riddle: "I help you build tall things, but I’m not a crane. What am I?" },
+    { word: "quicksand", riddle: "I suck things in, but I’m not a vacuum. What am I?" },
+    { word: "sundial", riddle: "I tell time using the sun, but I don’t have any numbers. What am I?" },
     { word: "apple", riddle: "I’m a red or green fruit, and keeping me a day might keep the doctor away. What am I?" },
     { word: "banana", riddle: "I’m yellow, curved, and monkeys love me. What am I?" },
     { word: "car", riddle: "I have four wheels and take you places. What am I?" },
@@ -125,17 +164,19 @@ function refreshWordList() {
 }
 refreshWordList();
 //
-
-
+const questionField = document.querySelector('.question-field');
 const questionElement = document.querySelector('.question');
 const submitBtnElement = document.querySelector('.submit-btn');
 const inputElement = document.querySelector('.input-box');
 const statusElement = document.querySelector('.status');
 const pointElement = document.querySelector('.point');
 const resetBtnElement = document.querySelector('.reset-btn');
-const levelElement = document.querySelector('.round');
+const levelElement = document.querySelector('.q-no');
 const qLoader = document.getElementById('qloader');
+const answerField = document.querySelector('.answer-field');
+const resultField = document.querySelector('.result-field');
 
+questionElement.innerHTML = `<button class='start-btn' onclick="startGame()">Start Game</button>`;
 
 ///
 
@@ -155,37 +196,30 @@ async function renderQuestion(idx) {
 
     
 }
-renderQuestion(0);
+//renderQuestion(0);
+const levelBar = document.querySelector('.round');
+levelBar.classList.add('vanish');
+answerField.classList.add('vanish');
+resultField.classList.add('vanish');
+function startGame() {
+    levelBar.classList.remove('vanish');
+    answerField.classList.remove('vanish');
+    resultField.classList.remove('vanish');
+    qLoader.innerHTML = '';
+    renderQuestion(0);
+}
 
-// function hideLetters(word) {
-//     const chars = word.split("");
-//     const visibleIndices = new Set();
-  
-//     // Always show at least one letter
-//     const mustShowIndex = Math.floor(Math.random() * chars.length);
-//     visibleIndices.add(mustShowIndex);
-  
-//     // Randomly show or hide other letters
-//     const result = chars.map((char, i) => {
-//       if (visibleIndices.has(i) || Math.random() > 0.5) {
-//         visibleIndices.add(i); // track shown letters
-//         return char;
-//       } else {
-//         return "_";
-//       }
-//     });
-  
-    // If by some randomness only one letter was visible, force one more visible
-//     if (visibleIndices.size < 2 && chars.length > 1) {
-//       let otherIndex;
-//       do {
-//         otherIndex = Math.floor(Math.random() * chars.length);
-//       } while (visibleIndices.has(otherIndex));
-//       result[otherIndex] = chars[otherIndex];
-//     }
-  
-//     return result.join(" ");
-// }
+function getHighScore() {
+    if(localStorage.getItem('highScore')) {
+        return localStorage.getItem('highScore');
+    }
+    localStorage.clear();
+    return 0;
+}
+pointElement.innerHTML = `Point: ${points = points}/5 | Your High Score: ${getHighScore()}`
+function setHighScore(score) {
+    localStorage.setItem('highScore',score);
+}
 
 
 let correct = 0;
@@ -199,7 +233,7 @@ submitBtnElement.addEventListener('click', async()=>{
             statusElement.innerHTML = `Congrats 🎉 You Guessed The Correct Word i.e. ${words[wordIdx].word}`;
             correct = correct+1;
             statusElement.classList.add("correct");
-            pointElement.innerHTML = `Point: ${points = points+1}/5`;
+            pointElement.innerHTML = `Point: ${points = points+1}/5 | Your High Score: ${getHighScore()}`;
             setTimeout(()=>{
                 statusElement.innerHTML = '';
                 statusElement.classList.remove("correct");
@@ -209,7 +243,7 @@ submitBtnElement.addEventListener('click', async()=>{
             statusElement.classList.add("incorrect");
             statusElement.innerHTML = `Incorrect! It was ${words[wordIdx].word}`;
             incorrect = incorrect+1;
-            pointElement.innerHTML = `Point: ${points}/5`
+            pointElement.innerHTML = `Point: ${points = points}/5 | Your High Score: ${getHighScore()}`
             setTimeout(()=>{
                 statusElement.innerHTML = '';
                 statusElement.classList.remove("incorrect");
@@ -218,6 +252,7 @@ submitBtnElement.addEventListener('click', async()=>{
         wordIdx++;
         if(wordIdx === 5) {
             levelElement.innerHTML = `Level-${level}`;
+            points>getHighScore()?setHighScore(points):setHighScore(getHighScore());
             showPopup(correct,incorrect,5);
             setTimeout(()=>{
             },5000);
@@ -232,7 +267,10 @@ submitBtnElement.addEventListener('click', async()=>{
 
 resetBtnElement.addEventListener('click',()=>{
     points = 0;
-    pointElement.innerHTML = `Point: ${points}`;
+    
+    setHighScore(0);
+    pointElement.innerHTML = `Point: ${points = 0}/5 | Your High Score: ${getHighScore()}`;
+    alert('All scores are Deleted!');
 
 });
 
