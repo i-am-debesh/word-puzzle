@@ -1,43 +1,4 @@
 const wordRiddles = [
-    { word: "compass", riddle: "I help you find direction, but I don’t have legs. What am I?" },
-    { word: "telescope", riddle: "I bring distant stars closer, but I’m not a spaceship. What am I?" },
-    { word: "bicycle", riddle: "I have two wheels and pedals, but I don’t go on my own. What am I?" },
-    { word: "rocket", riddle: "I launch into space, but I don’t need wings. What am I?" },
-    { word: "scissors", riddle: "I have two blades and I cut things, but I don’t have a mouth. What am I?" },
-    { word: "umbrella", riddle: "I open up when it rains, but I don’t have a brain. What am I?" },
-    { word: "calculator", riddle: "I help you count numbers, but I’m not a person. What am I?" },
-    { word: "sailboat", riddle: "I glide on water, and the wind is my engine. What am I?" },
-    { word: "snowflake", riddle: "I am unique, falling from the sky in winter. What am I?" },
-    { word: "magnifying glass", riddle: "I help you see things bigger than they are. What am I?" },
-    { word: "bridge", riddle: "I connect two places, but I’m not a road. What am I?" },
-    { word: "fountain", riddle: "I have water, but I’m not a lake or river. What am I?" },
-    { word: "anchor", riddle: "I keep ships in place, but I don’t sail. What am I?" },
-    { word: "whistle", riddle: "I make a sound when you blow, but I’m not a horn. What am I?" },
-    { word: "parachute", riddle: "I help you fall slowly, but I’m not a bird. What am I?" },
-    { word: "firetruck", riddle: "I carry water to put out flames, but I’m not a firefighter. What am I?" },
-    { word: "microscope", riddle: "I help you see tiny things, but I don’t make them bigger. What am I?" },
-    { word: "trolley", riddle: "I run on tracks, carrying people around. What am I?" },
-    { word: "skateboard", riddle: "I roll on four wheels, and I’m not a car. What am I?" },
-    { word: "fishing rod", riddle: "I help you catch fish, but I’m not a net. What am I?" },
-    { word: "helicopter", riddle: "I fly without wings and have a spinning blade. What am I?" },
-    { word: "glasses", riddle: "I help you see clearer, but I don’t have eyes. What am I?" },
-    { word: "keyboard", riddle: "I have keys but no locks, and I help you type. What am I?" },
-    { word: "jigsaw", riddle: "I’m a puzzle, piece by piece, I come together. What am I?" },
-    { word: "scooter", riddle: "I have two wheels and you push me with your feet. What am I?" },
-    { word: "wrench", riddle: "I help tighten or loosen things, but I don’t turn by myself. What am I?" },
-    { word: "flashlight", riddle: "I light the way in the dark, but I’m not the sun. What am I?" },
-    { word: "binoculars", riddle: "I help you see far away things, but I’m not a telescope. What am I?" },
-    { word: "sunflower", riddle: "I turn to the sun, but I’m not alive. What am I?" },
-    { word: "drone", riddle: "I fly without a pilot, but I’m not a bird. What am I?" },
-    { word: "thermometer", riddle: "I measure temperature, but I don’t feel heat. What am I?" },
-    { word: "waterfall", riddle: "I’m made of water, and I fall from great heights. What am I?" },
-    { word: "sled", riddle: "I glide on snow, but I don’t have wheels. What am I?" },
-    { word: "telescope", riddle: "I help you see stars far away, but I’m not a spaceship. What am I?" },
-    { word: "furnace", riddle: "I heat up your home, but I’m not a fire. What am I?" },
-    { word: "magnets", riddle: "I attract things without touching them. What am I?" },
-    { word: "scaffolding", riddle: "I help you build tall things, but I’m not a crane. What am I?" },
-    { word: "quicksand", riddle: "I suck things in, but I’m not a vacuum. What am I?" },
-    { word: "sundial", riddle: "I tell time using the sun, but I don’t have any numbers. What am I?" },
     { word: "apple", riddle: "I’m a red or green fruit, and keeping me a day might keep the doctor away. What am I?" },
     { word: "banana", riddle: "I’m yellow, curved, and monkeys love me. What am I?" },
     { word: "car", riddle: "I have four wheels and take you places. What am I?" },
@@ -136,7 +97,46 @@ const wordRiddles = [
     { word: "zoo", riddle: "You visit me to see animals. What am I?" },
     { word: "bucket", riddle: "I carry water or sand. What am I?" },
     { word: "candle", riddle: "I melt as I give you light. What am I?" },
-    { word: "duck", riddle: "I quack and swim with webbed feet. What am I?" }
+    { word: "duck", riddle: "I quack and swim with webbed feet. What am I?" },
+    { word: "compass", riddle: "I help you find direction, but I don’t have legs. What am I?" },
+    { word: "telescope", riddle: "I bring distant stars closer, but I’m not a spaceship. What am I?" },
+    { word: "bicycle", riddle: "I have two wheels and pedals, but I don’t go on my own. What am I?" },
+    { word: "rocket", riddle: "I launch into space, but I don’t need wings. What am I?" },
+    { word: "scissors", riddle: "I have two blades and I cut things, but I don’t have a mouth. What am I?" },
+    { word: "umbrella", riddle: "I open up when it rains, but I don’t have a brain. What am I?" },
+    { word: "calculator", riddle: "I help you count numbers, but I’m not a person. What am I?" },
+    { word: "sailboat", riddle: "I glide on water, and the wind is my engine. What am I?" },
+    { word: "snowflake", riddle: "I am unique, falling from the sky in winter. What am I?" },
+    { word: "magnifying glass", riddle: "I help you see things bigger than they are. What am I?" },
+    { word: "bridge", riddle: "I connect two places, but I’m not a road. What am I?" },
+    { word: "fountain", riddle: "I have water, but I’m not a lake or river. What am I?" },
+    { word: "anchor", riddle: "I keep ships in place, but I don’t sail. What am I?" },
+    { word: "whistle", riddle: "I make a sound when you blow, but I’m not a horn. What am I?" },
+    { word: "parachute", riddle: "I help you fall slowly, but I’m not a bird. What am I?" },
+    { word: "firetruck", riddle: "I carry water to put out flames, but I’m not a firefighter. What am I?" },
+    { word: "microscope", riddle: "I help you see tiny things, but I don’t make them bigger. What am I?" },
+    { word: "trolley", riddle: "I run on tracks, carrying people around. What am I?" },
+    { word: "skateboard", riddle: "I roll on four wheels, and I’m not a car. What am I?" },
+    { word: "fishing rod", riddle: "I help you catch fish, but I’m not a net. What am I?" },
+    { word: "helicopter", riddle: "I fly without wings and have a spinning blade. What am I?" },
+    { word: "glasses", riddle: "I help you see clearer, but I don’t have eyes. What am I?" },
+    { word: "keyboard", riddle: "I have keys but no locks, and I help you type. What am I?" },
+    { word: "jigsaw", riddle: "I’m a puzzle, piece by piece, I come together. What am I?" },
+    { word: "scooter", riddle: "I have two wheels and you push me with your feet. What am I?" },
+    { word: "wrench", riddle: "I help tighten or loosen things, but I don’t turn by myself. What am I?" },
+    { word: "flashlight", riddle: "I light the way in the dark, but I’m not the sun. What am I?" },
+    { word: "binoculars", riddle: "I help you see far away things, but I’m not a telescope. What am I?" },
+    { word: "sunflower", riddle: "I turn to the sun, but I’m not alive. What am I?" },
+    { word: "drone", riddle: "I fly without a pilot, but I’m not a bird. What am I?" },
+    { word: "thermometer", riddle: "I measure temperature, but I don’t feel heat. What am I?" },
+    { word: "waterfall", riddle: "I’m made of water, and I fall from great heights. What am I?" },
+    { word: "sled", riddle: "I glide on snow, but I don’t have wheels. What am I?" },
+    { word: "telescope", riddle: "I help you see stars far away, but I’m not a spaceship. What am I?" },
+    { word: "furnace", riddle: "I heat up your home, but I’m not a fire. What am I?" },
+    { word: "magnets", riddle: "I attract things without touching them. What am I?" },
+    { word: "scaffolding", riddle: "I help you build tall things, but I’m not a crane. What am I?" },
+    { word: "quicksand", riddle: "I suck things in, but I’m not a vacuum. What am I?" },
+    { word: "sundial", riddle: "I tell time using the sun, but I don’t have any numbers. What am I?" }
 ];
 function getRandomInt(start, end) {
     return Math.floor(Math.random() * (end - start + 1)) + start;
@@ -158,12 +158,17 @@ function getRandomWords(n, list) {
 let words = [];
 let points = 0;
 let level = 1;
+let timeLimit = 15;
+let soundAllowed = true;
+let isPlaying = true;
 
 function refreshWordList() {
     words = getRandomWords(5,wordRiddles);
 }
 refreshWordList();
 //
+
+const clockElement = document.querySelector('.clock');
 const questionField = document.querySelector('.question-field');
 const questionElement = document.querySelector('.question');
 const submitBtnElement = document.querySelector('.submit-btn');
@@ -175,11 +180,70 @@ const levelElement = document.querySelector('.q-no');
 const qLoader = document.getElementById('qloader');
 const answerField = document.querySelector('.answer-field');
 const resultField = document.querySelector('.result-field');
+const muteBtnElement = document.querySelector('.mute-btn');
 
 questionElement.innerHTML = `<button class='start-btn' onclick="startGame()">Start Game</button>`;
 
 ///
+////////////////SOUND EFFECTS::::::::::::::::
 
+muteBtnElement.addEventListener('click',()=>{
+    if(soundAllowed) {
+        if(isPlaying) {
+            stopClockSound();
+        }
+        soundAllowed = false;
+        muteBtnElement.innerText = `Sound: OFF`;
+    }else {
+        soundAllowed = true;
+        muteBtnElement.innerText = `Sound: ON`;
+    }
+})
+const clockSound = new Audio("/musics/clockSound.mp3");
+clockSound.volume = 0.5;
+const correctEffect = new Audio("/musics/correct.mp3");
+const incorrectEffect = new Audio("/musics/wrong.mp3");
+function playClockSound() {
+    clockSound.play();
+    clockSound.loop =true;
+}
+function stopClockSound () {
+    clockSound.pause();
+}
+
+
+/////////////////////////////////////
+//////////////CLOCK:::::::::::
+clockElement.innerHTML = `15s`;
+function startTimer(timeLimit,soundAllowed) {
+    clockElement.classList.remove('less-time');
+    submitBtnElement.disabled = true;
+    inputElement.readOnly = false;
+    if(soundAllowed){
+        playClockSound();
+        isPlaying = true;
+    }
+    const myInterval = setInterval(()=>{
+        timeLimit -= 1;
+        clockElement.innerHTML = `${timeLimit}s`;
+        if(timeLimit <= 5) {
+            clockElement.classList.add('less-time');
+        }
+        if(timeLimit === 0) {
+            if(inputElement.value == '') {
+                inputElement.value = 'not-answered!';
+            }
+            submitBtnElement.disabled = false;
+            inputElement.readOnly = true;
+            stopClockSound();
+            clearInterval(myInterval);
+        }
+        
+    },1000)
+}
+
+
+/////////////////////////////////
 let wordIdx = 0;
 async function renderQuestion(idx) {
     inputElement.value = '';
@@ -201,14 +265,17 @@ const levelBar = document.querySelector('.round');
 levelBar.classList.add('vanish');
 answerField.classList.add('vanish');
 resultField.classList.add('vanish');
+
 function startGame() {
     levelBar.classList.remove('vanish');
     answerField.classList.remove('vanish');
     resultField.classList.remove('vanish');
     qLoader.innerHTML = '';
+    setTimeout(()=>{startTimer(timeLimit)},2000);
+    playClockSound();
     renderQuestion(0);
 }
-
+//startGame();
 function getHighScore() {
     if(localStorage.getItem('highScore')) {
         return localStorage.getItem('highScore');
@@ -230,6 +297,7 @@ submitBtnElement.addEventListener('click', async()=>{
     if(inputElement.value !== '') {
         questionElement.innerHTML = '';
         if((inputElement.value).toLowerCase() === words[wordIdx].word) {
+            if(soundAllowed){correctEffect.play()};
             statusElement.innerHTML = `Congrats 🎉 You Guessed The Correct Word i.e. ${words[wordIdx].word}`;
             correct = correct+1;
             statusElement.classList.add("correct");
@@ -237,9 +305,11 @@ submitBtnElement.addEventListener('click', async()=>{
             setTimeout(()=>{
                 statusElement.innerHTML = '';
                 statusElement.classList.remove("correct");
+                startTimer(timeLimit,soundAllowed);
             },2000)
             
         }else {
+            if(soundAllowed){incorrectEffect.play()};
             statusElement.classList.add("incorrect");
             statusElement.innerHTML = `Incorrect! It was ${words[wordIdx].word}`;
             incorrect = incorrect+1;
@@ -247,6 +317,7 @@ submitBtnElement.addEventListener('click', async()=>{
             setTimeout(()=>{
                 statusElement.innerHTML = '';
                 statusElement.classList.remove("incorrect");
+                startTimer(timeLimit,soundAllowed);
             },2000)
         } 
         wordIdx++;

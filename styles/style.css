@@ -29,18 +29,21 @@ h1{
     font-weight: bolder;
     border: none;
     margin: 1rem;
-    background-color: white;    
+    color: white;  
     padding: 1rem;
     align-self: center;
     border: none;
     box-shadow: 1px 1px 8px rgb(246, 246, 246);
-    background-color: rgba(179, 127, 209, 0.712);
+    background-color: rgba(119, 197, 237, 0);
     
 }
 .round {
     display: flex;
     justify-content: space-between;
     font-size: 1.4rem;
+}
+.less-time {
+    color: rgba(255, 11, 11, 0.993);
 }
 .question-field {
     margin: 2rem;
@@ -115,4 +118,14 @@ h1{
 }
 .start-btn:active {
     opacity: 50%;
+}
+.mute-btn {
+    padding: 0.5rem;
+    margin-top: 2rem;
+    border: none;
+    box-shadow: 1px 1px 8px rgb(197, 221, 197);
+    background-color: rgba(66, 80, 210, 0.712);
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    margin-left: 2rem;
 }
